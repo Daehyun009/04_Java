@@ -1,17 +1,17 @@
 package student.dto;
 
-// DTO(Data Transfer Object) : 값 전달용 객체
-// -> 객체를 이용해서 여러 값을 묶어
-// 	  한 번에 전달하는 용도
+// DTO(Data Trasfer Object) : 값 전달용 객체
+// -> 객체를 이용해서 여러 값을 묶어 
+//    한 번에 전달하는 용도
 public class StudentDTO {
 	private String studentNumber; // 학번
-	private String name; // 이름
-	private char gender; // 성별
-	private int html;
-	private int css;
-	private int js;
-	private int java;
-
+	private String name;		  // 이름
+	private char   gender;		  // 성별
+	private int    html;
+	private int    css;
+	private int    js;
+	private int    java;
+	
 	// 기본 생성자 X
 	// - 생성자가 하나도 없을 경우 
 	//   -> 컴파일러가 기본 생성자 추가
@@ -28,6 +28,17 @@ public class StudentDTO {
 		this.name = name;
 		this.gender = gender;
 	}
+
+	// 점수 담는 용도로 객체 생성할 때 사용하는 생성자
+	public StudentDTO(int html, int css, int js, int java) {
+		super();
+		this.html = html;
+		this.css = css;
+		this.js = js;
+		this.java = java;
+	}
+
+
 
 	public String getStudentNumber() {
 		return studentNumber;
@@ -97,6 +108,7 @@ public class StudentDTO {
 			studentNumber, gender, name,
 			html, css, js, java);
 	}
+	
 	
 	
 }
